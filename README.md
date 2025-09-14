@@ -1,69 +1,100 @@
-# 🩺 Diabetes Prediction App
+# 🏠 Hyderabad House Price Prediction App
 
-This is a Streamlit-based web application that uses a Logistic Regression model to predict whether a patient is diabetic or not based on health-related parameters. The app provides prediction results along with model accuracy and confidence level.
-
----
-
-## 📊 Features
-
-- Accepts 8 health-related inputs from the user.
-- Predicts whether the patient is **Diabetic** or **Not Diabetic**.
-- Displays:
-  - Model **accuracy** (trained on real data)
-  - **Prediction confidence** (% likelihood of diabetes)
+This is a **Streamlit-based machine learning application** that predicts **house prices in Hyderabad** based on synthetic real-estate data.  
+The app uses features like area, bedrooms, bathrooms, and location to estimate the price of a house.
 
 ---
 
-## 🧾 Input Features
-
-1. **Pregnancies**
-2. **Glucose Level**
-3. **Blood Pressure**
-4. **Skin Thickness**
-5. **Insulin**
-6. **BMI** (Body Mass Index)
-7. **Diabetes Pedigree Function**
-8. **Age**
-
----
-
-## 📁 Project Structure
-
-diabetes-predictor/
-│
-├── app.py # Streamlit app code
-├── data.csv # Dataset (Pima Indians Diabetes Dataset)
-└── README.md # Project instructions
-
+## 🚀 Features
+- Interactive **web interface** built with Streamlit.
+- Synthetic dataset with **Hyderabad localities**:
+  - Madhapur
+  - Kukatpally
+  - Kondapur
+  - Gachibowli
+  - Miyapur
+- Machine Learning model pipeline with:
+  - **OneHotEncoding** for categorical features (Location)
+  - **Linear Regression** for prediction
+- Displays **model performance metrics** (MAE, R² Score) in the sidebar.
+- Instant prediction based on user input.
 
 ---
 
-## ⚙️ Requirements
-
-- Python 3.7+
-- Streamlit
-- Scikit-learn
-- Pandas
-- NumPy
+## 📂 Project Structure
+```
+hyderabad-house-price-app/
+├── house_price_app.py   # Main Streamlit application
+├── requirements.txt     # Dependencies
+└── README.md            # Project documentation
+```
 
 ---
 
-## 📦 Install Dependencies
+## 📦 Installation
 
-Create a virtual environment (optional but recommended):
+1. **Clone this repository** (or copy project files):
+   ```bash
+   git clone https://github.com/your-username/hyderabad-house-price-app.git
+   cd hyderabad-house-price-app
+   ```
 
+2. **Create a virtual environment** (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Linux/Mac
+   venv\Scripts\activate      # Windows
+   ```
+
+3. **Install required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## ▶️ Run the Application
+Run the Streamlit app with:
 ```bash
-python -m venv venv
-source venv/bin/activate      # On Windows: venv\Scripts\activate
-## Install the required dependencies:
-```bash
-pip install -r requirements.txt
+streamlit run house_price_app.py
+```
 
-## 🚀 How to Run the App 
-
-Ensure data.csv is present in the same folder as app.py.
-
-Launch the Streamlit app:
-
-Open your browser and go to:
+The app will open in your browser at:
+```
 http://localhost:8501
+```
+
+---
+
+## 📊 Example Prediction
+- Area: **2000 sqft**
+- Bedrooms: **3**
+- Bathrooms: **2**
+- Location: **Gachibowli**
+
+👉 The app may predict an estimated price of **₹ 1.8 Cr** (example output).
+
+---
+
+## 🛠 Requirements
+Contents of `requirements.txt`:
+```
+streamlit
+pandas
+numpy
+scikit-learn
+```
+
+---
+
+## 💡 Future Improvements
+- Use a **real Hyderabad housing dataset** instead of synthetic data.
+- Try advanced ML models (Random Forest, XGBoost).
+- Add **data visualization** for price trends by locality.
+- Deploy app on **Streamlit Cloud or Heroku**.
+
+---
+
+## 📌 Disclaimer
+⚠️ This project uses **synthetic data** and is meant for **educational/demo purposes only**.  
+It does not represent real Hyderabad housing market prices.
